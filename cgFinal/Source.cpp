@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <math.h>
 
-//camera code from https://www.lighthouse3d.com/tutorials/glut-tutorial/mouse-putting-it-all-together/
-
 bool bwire = true;
 bool bsolid = false;
 bool baxis = true;
@@ -234,7 +232,6 @@ void display() {
 	glMatrixMode(GL_MODELVIEW);
 
 
-	//first light code from https://stackoverflow.com/questions/20177604/opengl-light-direction
 	GLfloat lightPosition[] = { 0, 5, 0 };
 	GLfloat lightAmbient[] = { 0,0.1,0.1,1 };
 	GLfloat lightDiffuse[] = { 1,1,1,1 };
@@ -427,7 +424,7 @@ void mouseButton(int button, int state, int x, int y) {
 	}
 
 	float fraction = 0.5f;
-	//scroll wheel code from https://stackoverflow.com/questions/14378/using-the-mouse-scrollwheel-in-glut
+
 	if (button == 3) { //scroll up
 		if (state == GLUT_UP) return;
 		x += lx * fraction;
